@@ -1,0 +1,17 @@
+#version 150
+
+//input from vertshader
+//in vec3 color;
+in vec2 pass_textureCoords;
+
+out vec4 out_Color;
+
+uniform sampler2D textureSampler;
+
+void main() {
+
+    //takes in texture sample, and the coordinates
+    out_Color = texture(textureSampler, pass_textureCoords);
+    //out_Color = vec4(color, 1.0);
+
+}

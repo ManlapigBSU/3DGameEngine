@@ -1,0 +1,76 @@
+# Cube OBJ File with Correct UVs for Minecraft Grass Block Texture
+
+# Vertices (Each face has unique vertices to avoid UV overlap)
+v -0.5  0.5 -0.5  # 1 Front Top Left
+v -0.5 -0.5 -0.5  # 2 Front Bottom Left
+v  0.5 -0.5 -0.5  # 3 Front Bottom Right
+v  0.5  0.5 -0.5  # 4 Front Top Right
+
+v -0.5  0.5  0.5  # 5 Back Top Left
+v -0.5 -0.5  0.5  # 6 Back Bottom Left
+v  0.5 -0.5  0.5  # 7 Back Bottom Right
+v  0.5  0.5  0.5  # 8 Back Top Right
+
+v -0.5  0.5 -0.5  # 9 Left Top Left
+v -0.5 -0.5 -0.5  # 10 Left Bottom Left
+v -0.5 -0.5  0.5  # 11 Left Bottom Right
+v -0.5  0.5  0.5  # 12 Left Top Right
+
+v  0.5  0.5 -0.5  # 13 Right Top Left
+v  0.5 -0.5 -0.5  # 14 Right Bottom Left
+v  0.5 -0.5  0.5  # 15 Right Bottom Right
+v  0.5  0.5  0.5  # 16 Right Top Right
+
+v -0.5  0.5  0.5  # 17 Top Top Left
+v  0.5  0.5  0.5  # 18 Top Bottom Left
+v  0.5  0.5 -0.5  # 19 Top Bottom Right
+v -0.5  0.5 -0.5  # 20 Top Top Right
+
+v -0.5 -0.5  0.5  # 21 Bottom Top Left
+v  0.5 -0.5  0.5  # 22 Bottom Bottom Left
+v  0.5 -0.5 -0.5  # 23 Bottom Bottom Right
+v -0.5 -0.5 -0.5  # 24 Bottom Top Right
+
+# Texture Coordinates (UV Mapping)
+# Side Faces (Grass-Dirt Transition)
+vt 0.0  0.0  # 1
+vt 0.0  0.5  # 2
+vt 0.5  0.5  # 3
+vt 0.5  0.0  # 4
+
+# Top Face (Grass Block Top)
+vt 0.0  0.5  # 5
+vt 0.5  0.5  # 6
+vt 0.0  1.0  # 7
+vt 0.5  1.0  # 8
+
+# Bottom Face (Dirt Block)
+vt 0.5  0.0  # 9
+vt 1.0  0.0  # 10
+vt 0.5  0.5  # 11
+vt 1.0  0.5  # 12
+
+# Faces (Using Correct UVs)
+# Front Face
+f 1/1  2/2  3/3
+f 3/3  4/4  1/1
+
+# Back Face
+f 5/1  6/2  7/3
+f 7/3  8/4  5/1
+
+# Left Face
+f 9/1  10/2  11/3
+f 11/3 12/4  9/1
+
+# Right Face
+f 13/1  14/2  15/3
+f 15/3 16/4  13/1
+
+# Top Face (Grass)
+f 17/5 18/6 19/8
+f 19/8 20/7 17/5
+
+# Bottom Face (Dirt)
+f 21/9 22/10 23/12
+f 23/12 24/11 21/9
