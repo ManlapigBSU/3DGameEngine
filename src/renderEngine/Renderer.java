@@ -33,7 +33,7 @@ public class Renderer {
         //clears color from previous frame
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
 
-        GL11.glClearColor(0, 0, 0, 0);
+        GL11.glClearColor(1, 0, 0, 0);
 
 
     }
@@ -50,6 +50,7 @@ public class Renderer {
         //enables attribute list "0"
         GL20.glEnableVertexAttribArray(0);
         GL20.glEnableVertexAttribArray(1);
+        GL20.glEnableVertexAttribArray(2);
         Matrix4f transformationMatrix = Maths.createTransformationMatrix(entity.getPosition(), entity.getRotX(), entity.getRotY(), entity.getRotZ(), entity.getScale());
         shader.loadTransformationMatrix(transformationMatrix);
 
@@ -63,6 +64,7 @@ public class Renderer {
         //disables attribute list "0"
         GL20.glDisableVertexAttribArray(0);
         GL20.glDisableVertexAttribArray(1);
+        GL20.glDisableVertexAttribArray(2);
 
         //unbinds vao
         GL30.glBindVertexArray(0);
